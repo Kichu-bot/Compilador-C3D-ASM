@@ -16,3 +16,6 @@
 # Archivos del sistema operativo
 .DS_Store
 Thumbs.db
+
+# Archivos de estado de la interfaz gráfica
+app_state.dat
