@@ -1,0 +1,84 @@
+valor=0;
+mem0=0;
+mem1=0;
+mem2=0;
+mem3=0;
+mem4=0;
+mostrar "==============================";
+mostrar "   SIMULADOR DE ARREGLOS v1   ";
+mostrar "==============================";
+mostrar "Llenando el arreglo con un ciclo...";
+i=0;
+L1:
+IF i<=4 goto L2
+goto L4;
+L2:
+t1=i*10;
+valor=t1;
+IF i==0 goto L6
+IF i==1 goto L7
+IF i==2 goto L8
+IF i==3 goto L9
+IF i==4 goto L10
+goto L5;
+L6:
+mem0=valor;
+goto L5;
+L7:
+mem1=valor;
+goto L5;
+L8:
+mem2=valor;
+goto L5;
+L9:
+mem3=valor;
+goto L5;
+L10:
+mem4=valor;
+goto L5;
+L5:
+L3:
+t2=i+1;
+i=t2;
+goto L1;
+L4:
+mostrar "Arreglo llenado con exito.";
+mostrar "Leyendo datos del arreglo...";
+mostrar "";
+j=0;
+L11:
+IF j<=4 goto L12
+goto L14;
+L12:
+IF j==0 goto L16
+IF j==1 goto L17
+IF j==2 goto L18
+IF j==3 goto L19
+IF j==4 goto L20
+goto L15;
+L16:
+valor=mem0;
+goto L15;
+L17:
+valor=mem1;
+goto L15;
+L18:
+valor=mem2;
+goto L15;
+L19:
+valor=mem3;
+goto L15;
+L20:
+valor=mem4;
+goto L15;
+L15:
+mostrar "Valor en el indice ";
+mostrar j;
+mostrar ": ";
+mostrar valor;
+L13:
+t3=j+1;
+j=t3;
+goto L11;
+L14:
+mostrar "==============================";

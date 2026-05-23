@@ -1,0 +1,18 @@
+# Archivos compilados
+*.class
+*.jar
+*.war
+
+# Carpetas temporales y de salida de NetBeans
+/build/
+/dist/
+
+# Configuración privada del IDE (contraseñas, rutas locales, etc.)
+/nbproject/private/
+/nbproject/project.xml.prev
+/nbproject/build-impl.xml
+/nbproject/genfiles.properties
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db

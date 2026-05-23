@@ -1,0 +1,130 @@
+verificarPar:
+recibir numero;
+t1=numero/2;
+divi_par=t1;
+t2=divi_par*2;
+mult_par=t2;
+t3=numero-mult_par;
+residuo_par=t3;
+es_par=0;
+IF residuo_par==0 goto L2
+goto L1;
+L2:
+es_par=1;
+L1:
+retornar es_par;
+calcularFactorial:
+recibir numero;
+resultado_fact=1;
+temp=numero;
+L4:
+IF temp>1 goto L5
+goto L6;
+L5:
+t4=resultado_fact*temp;
+resultado_fact=t4;
+t5=temp-1;
+temp=t5;
+goto L4;
+L6:
+retornar resultado_fact;
+verificarPrimo:
+recibir numero;
+es_primo=1;
+IF numero<=1 goto L8
+goto L9;
+L8:
+es_primo=0;
+goto L7;
+L9:
+t6=numero/2;
+limite=t6;
+i=2;
+L10:
+IF i<=limite goto L11
+goto L7;
+L11:
+t7=numero/i;
+divi_primo=t7;
+t8=divi_primo*i;
+mult_primo=t8;
+t9=numero-mult_primo;
+residuo_val=t9;
+IF residuo_val==0 goto L15
+goto L12;
+L15:
+es_primo=0;
+goto L7;
+L12:
+t10=i+1;
+i=t10;
+goto L10;
+L7:
+retornar es_primo;
+principal:
+opcion=1;
+n=0;
+L17:
+IF opcion!=0 goto L18
+goto L19;
+L18:
+mostrar "===================================";
+mostrar "   ANALIZADOR MATEMATICO  ";
+mostrar "===================================";
+mostrar "1. Calcular Factorial";
+mostrar "2. Verificar si es Primo";
+mostrar "3. Saber si es Par o Impar";
+mostrar "0. Salir";
+mostrar "===================================";
+mostrar "Elija una opcion: ";
+leer opcion;
+IF opcion==1 goto L21
+IF opcion==2 goto L22
+IF opcion==3 goto L23
+IF opcion==0 goto L24
+goto L25;
+L21:
+mostrar "Ingrese numero para factorial: ";
+leer n;
+param n;
+t11 = call calcularFactorial, 1;
+fact=t11;
+mostrar "El factorial es: ";
+mostrar fact;
+goto L20;
+L22:
+mostrar "Ingrese numero a verificar: ";
+leer n;
+param n;
+t12 = call verificarPrimo, 1;
+primo=t12;
+IF primo==1 goto L27
+goto L28;
+L27:
+mostrar "-> El numero SI es primo.";
+goto L20;
+L28:
+mostrar "-> El numero NO es primo.";
+goto L20;
+L23:
+mostrar "Ingrese numero: ";
+leer n;
+param n;
+t13 = call verificarPar, 1;
+par=t13;
+IF par==1 goto L30
+goto L31;
+L30:
+mostrar "-> El numero es PAR.";
+goto L20;
+L31:
+mostrar "-> El numero es IMPAR.";
+goto L20;
+L24:
+mostrar "Apagando sistema matricial. Adios!";
+goto L20;
+L25:
+mostrar "-> Opcion invalida. Intente de nuevo.";
+L20:
+goto L17;
+L19:

@@ -1,0 +1,75 @@
+opcion=1;
+num1=0;
+num2=0;
+resultado=0;
+L1:
+IF opcion>0 goto L2
+goto L3;
+L2:
+mostrar "==============================";
+mostrar "    CALCULADORA EXPANDIDA     ";
+mostrar "==============================";
+mostrar "1. Sumar";
+mostrar "2. Restar";
+mostrar "3. Multiplicar";
+mostrar "4. Dividir";
+mostrar "0. Salir del programa";
+mostrar "==============================";
+mostrar "Elija una opcion: ";
+leer opcion;
+IF opcion==1 goto L5
+IF opcion==2 goto L6
+IF opcion==3 goto L7
+IF opcion==4 goto L8
+IF opcion==0 goto L9
+goto L10;
+L5:
+mostrar "Ingrese el primer numero: ";
+leer num1;
+mostrar "Ingrese el segundo numero: ";
+leer num2;
+t1=num1+num2;
+resultado=t1;
+mostrar "-> La suma es: ";
+mostrar resultado;
+goto L4;
+L6:
+mostrar "Ingrese el primer numero: ";
+leer num1;
+mostrar "Ingrese el segundo numero: ";
+leer num2;
+t2=num1-num2;
+resultado=t2;
+mostrar "-> La resta es: ";
+mostrar resultado;
+goto L4;
+L7:
+mostrar "Ingrese el primer numero: ";
+leer num1;
+mostrar "Ingrese el segundo numero: ";
+leer num2;
+t3=num1*num2;
+resultado=t3;
+mostrar "-> La multiplicacion es: ";
+mostrar resultado;
+goto L4;
+L8:
+mostrar "Ingrese el dividendo: ";
+leer num1;
+mostrar "Ingrese el divisor (no use cero): ";
+leer num2;
+t4=num1/num2;
+resultado=t4;
+mostrar "-> La division es: ";
+mostrar resultado;
+goto L4;
+L9:
+mostrar "Saliendo de la calculadora. Adios!";
+goto L4;
+L10:
+mostrar "-> ERROR: Opcion no valida.";
+goto L4;
+L4:
+mostrar "";
+goto L1;
+L3:

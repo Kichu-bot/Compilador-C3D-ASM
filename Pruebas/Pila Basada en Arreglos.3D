@@ -1,0 +1,193 @@
+opcion=1;
+tope=0;
+valor=0;
+indice=0;
+mem0=0;
+mem1=0;
+mem2=0;
+mem3=0;
+mem4=0;
+L1:
+IF opcion>0 goto L2
+goto L3;
+L2:
+mostrar "==============================";
+mostrar "  PILA BASADA EN ARRAY v2.0   ";
+mostrar "==============================";
+mostrar "1. Push (Apilar)";
+mostrar "2. Pop (Desapilar)";
+mostrar "3. Peek (Ver solo la Cima)";
+mostrar "4. Mostrar toda la Memoria";
+mostrar "0. Salir";
+mostrar "==============================";
+mostrar "Elija una opcion: ";
+leer opcion;
+IF opcion==1 goto L5
+IF opcion==2 goto L6
+IF opcion==3 goto L7
+IF opcion==4 goto L8
+IF opcion==0 goto L9
+goto L10;
+L5:
+IF tope==5 goto L12
+goto L13;
+L12:
+mostrar "-> ERROR: Pila LLENA (Stack Overflow)";
+goto L11;
+L13:
+mostrar "Ingrese el numero a apilar: ";
+leer valor;
+IF tope==0 goto L15
+IF tope==1 goto L16
+IF tope==2 goto L17
+IF tope==3 goto L18
+IF tope==4 goto L19
+goto L14;
+L15:
+mem0=valor;
+goto L14;
+L16:
+mem1=valor;
+goto L14;
+L17:
+mem2=valor;
+goto L14;
+L18:
+mem3=valor;
+goto L14;
+L19:
+mem4=valor;
+goto L14;
+L14:
+t1=tope+1;
+tope=t1;
+mostrar "-> Valor apilado correctamente.";
+L11:
+goto L4;
+L6:
+IF tope==0 goto L21
+goto L22;
+L21:
+mostrar "-> ERROR: Pila VACIA (Stack Underflow)";
+goto L20;
+L22:
+t2=tope-1;
+tope=t2;
+IF tope==0 goto L24
+IF tope==1 goto L25
+IF tope==2 goto L26
+IF tope==3 goto L27
+IF tope==4 goto L28
+goto L23;
+L24:
+valor=mem0;
+goto L23;
+L25:
+valor=mem1;
+goto L23;
+L26:
+valor=mem2;
+goto L23;
+L27:
+valor=mem3;
+goto L23;
+L28:
+valor=mem4;
+goto L23;
+L23:
+mostrar "-> Valor desapilado: ";
+mostrar valor;
+L20:
+goto L4;
+L7:
+IF tope==0 goto L30
+goto L31;
+L30:
+mostrar "-> ERROR: La pila esta vacia.";
+goto L29;
+L31:
+t3=tope-1;
+indice=t3;
+IF indice==0 goto L33
+IF indice==1 goto L34
+IF indice==2 goto L35
+IF indice==3 goto L36
+IF indice==4 goto L37
+goto L32;
+L33:
+valor=mem0;
+goto L32;
+L34:
+valor=mem1;
+goto L32;
+L35:
+valor=mem2;
+goto L32;
+L36:
+valor=mem3;
+goto L32;
+L37:
+valor=mem4;
+goto L32;
+L32:
+mostrar "-> El valor en la CIMA es: ";
+mostrar valor;
+L29:
+goto L4;
+L8:
+IF tope==0 goto L39
+goto L40;
+L39:
+mostrar "-> [ Pila Vacia ]";
+goto L38;
+L40:
+mostrar "--- MEMORIA ACTUAL ---";
+i=0;
+L41:
+IF i<tope goto L42
+goto L44;
+L42:
+IF i==0 goto L46
+IF i==1 goto L47
+IF i==2 goto L48
+IF i==3 goto L49
+IF i==4 goto L50
+goto L45;
+L46:
+valor=mem0;
+goto L45;
+L47:
+valor=mem1;
+goto L45;
+L48:
+valor=mem2;
+goto L45;
+L49:
+valor=mem3;
+goto L45;
+L50:
+valor=mem4;
+goto L45;
+L45:
+mostrar "Indice [";
+mostrar i;
+mostrar "] : ";
+mostrar valor;
+L43:
+t4=i+1;
+i=t4;
+goto L41;
+L44:
+mostrar "----------------------";
+L38:
+goto L4;
+L9:
+mostrar "Apagando sistema...";
+goto L4;
+L10:
+mostrar "-> ERROR: Opcion invalida.";
+goto L4;
+L4:
+mostrar "";
+goto L1;
+L3:

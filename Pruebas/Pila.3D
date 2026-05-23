@@ -1,0 +1,126 @@
+opcion=1;
+tope=0;
+valor=0;
+pila1=0;
+pila2=0;
+pila3=0;
+L1:
+IF opcion>0 goto L2
+goto L3;
+L2:
+mostrar "==============================";
+mostrar "       PILA (STACK) v1.0      ";
+mostrar "==============================";
+mostrar "1. Push (Apilar)";
+mostrar "2. Pop (Desapilar)";
+mostrar "3. Mostrar Pila";
+mostrar "0. Salir";
+mostrar "==============================";
+mostrar "Elija una opcion: ";
+leer opcion;
+IF opcion==1 goto L5
+IF opcion==2 goto L6
+IF opcion==3 goto L7
+IF opcion==0 goto L8
+goto L9;
+L5:
+IF tope==3 goto L11
+goto L12;
+L11:
+mostrar "-> ERROR: Pila LLENA (Overflow)";
+goto L10;
+L12:
+mostrar "Ingrese el numero a apilar: ";
+leer valor;
+t1=tope+1;
+tope=t1;
+IF tope==1 goto L14
+IF tope==2 goto L15
+IF tope==3 goto L16
+goto L13;
+L14:
+pila1=valor;
+goto L13;
+L15:
+pila2=valor;
+goto L13;
+L16:
+pila3=valor;
+goto L13;
+L13:
+mostrar "-> Valor apilado correctamente.";
+L10:
+goto L4;
+L6:
+IF tope==0 goto L18
+goto L19;
+L18:
+mostrar "-> ERROR: Pila VACIA (Underflow)";
+goto L17;
+L19:
+IF tope==3 goto L21
+IF tope==2 goto L22
+IF tope==1 goto L23
+goto L20;
+L21:
+valor=pila3;
+pila3=0;
+goto L20;
+L22:
+valor=pila2;
+pila2=0;
+goto L20;
+L23:
+valor=pila1;
+pila1=0;
+goto L20;
+L20:
+t2=tope-1;
+tope=t2;
+mostrar "-> Valor desapilado: ";
+mostrar valor;
+L17:
+goto L4;
+L7:
+mostrar "--- ESTADO ACTUAL DE LA PILA ---";
+IF tope==0 goto L25
+goto L26;
+L25:
+mostrar "[ Pila Vacia ]";
+goto L24;
+L26:
+IF tope>=3 goto L28
+goto L29;
+L28:
+mostrar "Posicion 3: ";
+mostrar pila3;
+goto L27;
+L29:
+IF tope>=2 goto L30
+goto L31;
+L30:
+mostrar "Posicion 2: ";
+mostrar pila2;
+goto L27;
+L31:
+IF tope>=1 goto L32
+goto L33;
+L32:
+mostrar "Posicion 1: ";
+mostrar pila1;
+goto L27;
+L33:
+L27:
+L24:
+mostrar "--------------------------------";
+goto L4;
+L8:
+mostrar "Apagando sistema...";
+goto L4;
+L9:
+mostrar "-> ERROR: Opcion invalida.";
+goto L4;
+L4:
+mostrar "";
+goto L1;
+L3:

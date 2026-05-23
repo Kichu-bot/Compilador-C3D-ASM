@@ -1,0 +1,18 @@
+saludar:
+mostrar "Iniciando programa de prueba...";
+sumar:
+recibir b;
+recibir a;
+t1=a+b;
+resultado=t1;
+retornar resultado;
+principal:
+call saludar, 0;
+a=10;
+b=5;
+param x;
+param y;
+t2 = call sumar, 2;
+total=t2;
+mostrar "El total es: ";
+mostrar total;

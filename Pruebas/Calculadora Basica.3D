@@ -1,0 +1,51 @@
+opcion=1;
+num1=0;
+num2=0;
+resultado=0;
+L1:
+IF opcion>0 goto L2
+goto L3;
+L2:
+mostrar "==============================";
+mostrar "    CALCULADORA OPTIMIZADA    ";
+mostrar "==============================";
+mostrar "1. Sumar";
+mostrar "2. Restar";
+mostrar "0. Salir del programa";
+mostrar "==============================";
+mostrar "Elija una opcion: ";
+leer opcion;
+IF opcion==1 goto L5
+IF opcion==2 goto L6
+IF opcion==0 goto L7
+goto L8;
+L5:
+mostrar "Ingrese el primer numero: ";
+leer num1;
+mostrar "Ingrese el segundo numero: ";
+leer num2;
+t1=num1+num2;
+resultado=t1;
+mostrar "-> La suma es: ";
+mostrar resultado;
+goto L4;
+L6:
+mostrar "Ingrese el primer numero: ";
+leer num1;
+mostrar "Ingrese el segundo numero: ";
+leer num2;
+t2=num1-num2;
+resultado=t2;
+mostrar "-> La resta es: ";
+mostrar resultado;
+goto L4;
+L7:
+mostrar "Saliendo de la calculadora. Adios!";
+goto L4;
+L8:
+mostrar "-> ERROR: Opcion no valida.";
+goto L4;
+L4:
+mostrar "";
+goto L1;
+L3:

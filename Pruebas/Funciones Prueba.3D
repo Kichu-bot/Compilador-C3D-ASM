@@ -1,0 +1,35 @@
+saludar:
+mostrar "Iniciando programa de prueba...";
+sumar:
+t1=a+b;
+resultado=t1;
+retornar resultado;
+principal:
+call saludar, 0;
+x=10;
+y=5;
+param x;
+param y;
+t2 = call sumar, 2;
+total=t2;
+mostrar "El total es: ";
+mostrar total;
+IF total>10 goto L2
+goto L3;
+L2:
+mostrar "El total es mayor a 10";
+goto L1;
+L3:
+mostrar "El total es 10 o menor";
+L1:
+i=0;
+L4:
+IF i<3 goto L5
+goto L7;
+L5:
+mostrar i;
+L6:
+t3=i+1;
+i=t3;
+goto L4;
+L7:
