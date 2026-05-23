@@ -61,16 +61,16 @@ ejecutable.
 
 ### 1. Compilación Exitosa
 Demostración del compilador procesando una prueba sin errores.
-![Compilación Exitosa](screenshots/Interfaz.png)
+![Compilación Exitosa](screenshots/Interfaz.PNG)
 
 ### 2. Recuperación de Errores
 El analizador sintáctico y semántico atrapando errores en tiempo real sin detener la ejecución del IDE.
-![Manejo de Errores](screenshots/Errores.png)
+![Manejo de Errores](screenshots/Errores.PNG)
 
 ### 3. Generacion C3D
 El conversor de codigo intermedio generando el archivo 3D.
-![Generacion de C3D](screenshots/C3D.png)
+![Generacion de C3D](screenshots/C3D.PNG)
 
 ### 4. Ejecucion ASM
 Probando La Ejecucion del ASM generado por nuestro conversor C3D a ASM.
-![Ejecucion de ASM](screenshots/Ejecucion.png)
+![Ejecucion de ASM](screenshots/EjecucionASM.PNG)
